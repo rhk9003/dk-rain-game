@@ -61,15 +61,13 @@
         </div>
 
         <div id="dkrg-g1-end" hidden>
-          <span class="dkrg-result-tag">遊戲 ① 結果</span>
+          <span class="dkrg-result-tag">遊戲 ① 完成</span>
           <div class="dkrg-end-score"><span id="dkrg-g1-final">0</span><small>/100 乾爽指數</small></div>
-          <div class="dkrg-end-badge" id="dkrg-g1-badge"></div>
           <p class="dkrg-end-line" id="dkrg-g1-line"></p>
           <div class="dkrg-grow">
-            <a class="dkrg-btn dkrg-btn-clay" href="https://www.dk-shoes.com.tw/v2/official/SalePageCategory/484785?sortMode=Curator" target="_blank" rel="noopener">逛雨天防水鞋 →</a>
             <button class="dkrg-btn dkrg-btn-ghost" type="button" id="dkrg-g1-again">再玩一次</button>
           </div>
-          <p class="dkrg-end-hint">↓ 往下滑，還有「② 對錯題」</p>
+          <p class="dkrg-end-hint">↓ 往下玩「② 對錯題」，最後算總分</p>
         </div>
       </div>
     </section>
@@ -97,13 +95,37 @@
         </div>
 
         <div id="dkrg-g2-end" hidden>
-          <span class="dkrg-result-tag">遊戲 ② 結果</span>
+          <span class="dkrg-result-tag">遊戲 ② 完成</span>
           <div class="dkrg-end-score"><span id="dkrg-g2-final">0</span><small>/6 答對</small></div>
-          <div class="dkrg-end-badge" id="dkrg-g2-badge"></div>
+          <p class="dkrg-end-line" id="dkrg-g2-line"></p>
           <div class="dkrg-grow">
-            <button class="dkrg-btn dkrg-btn-clay" type="button" id="dkrg-g2-again">再玩一次</button>
+            <button class="dkrg-btn dkrg-btn-ghost" type="button" id="dkrg-g2-again">再玩一次</button>
           </div>
-          <p class="dkrg-end-hint">↓ 往下滑，玩「③ 抽神器」</p>
+          <p class="dkrg-end-hint">↓ 往下看你的雨天總分</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 綜合結算 ===== -->
+    <section class="dkrg-game" id="dkrg-total" aria-labelledby="dkrg-total-h">
+      <div class="dkrg-gtag dkrg-gtag-total">綜合結算</div>
+      <h2 id="dkrg-total-h" class="dkrg-gh">你的雨天總分</h2>
+      <p class="dkrg-gsub">情境題＋對錯題加起來，就是你的雨天應對力。</p>
+      <div class="dkrg-card-game">
+        <div id="dkrg-total-locked">
+          <p class="dkrg-total-lock">玩完上面的「情境題」和「對錯題」，這裡會自動算出你的雨天總分。</p>
+          <p class="dkrg-total-prog">情境題：<b id="dkrg-tp1">未完成</b>　｜　對錯題：<b id="dkrg-tp2">未完成</b></p>
+        </div>
+        <div id="dkrg-total-show" hidden>
+          <div class="dkrg-end-score"><span id="dkrg-total-val">0</span><small>/100 雨天總分</small></div>
+          <div class="dkrg-end-badge" id="dkrg-total-badge"></div>
+          <p class="dkrg-end-line" id="dkrg-total-line"></p>
+          <p class="dkrg-total-break">情境題 <b id="dkrg-tb1">0</b>/100　·　對錯題 <b id="dkrg-tb2">0</b>/6</p>
+          <div class="dkrg-grow">
+            <a class="dkrg-btn dkrg-btn-clay" href="https://www.dk-shoes.com.tw/v2/official/SalePageCategory/484785?sortMode=Curator" target="_blank" rel="noopener">逛雨天防水鞋 →</a>
+            <button class="dkrg-btn dkrg-btn-ghost" type="button" id="dkrg-total-again">兩關重玩</button>
+          </div>
+          <p class="dkrg-end-hint">↓ 往下抽一張今日雨天神器</p>
         </div>
       </div>
     </section>
@@ -332,6 +354,13 @@
   #dkrg .dkrg-result-tag{display:inline-block;font-size:12.5px;font-weight:900;letter-spacing:.1em;color:#fff;background:var(--rain);border-radius:6px;padding:4px 11px;margin-bottom:6px;}
   #dkrg #dkrg-g2 .dkrg-result-tag{background:var(--amber);}
   #dkrg .dkrg-end-hint{font-size:13.5px;color:var(--ink2);font-weight:700;margin:16px 0 0;text-align:center;}
+  #dkrg .dkrg-gtag-total{background:#0e4853;}
+  #dkrg .dkrg-total-lock{font-size:15px;color:var(--ink2);text-align:center;margin:20px 0 12px;line-height:1.7;}
+  #dkrg .dkrg-total-prog{text-align:center;font-size:14px;color:var(--ink2);font-weight:700;margin:0 0 10px;}
+  #dkrg .dkrg-total-prog b{color:var(--rain-d);}
+  #dkrg .dkrg-total-break{text-align:center;font-size:13.5px;color:var(--ink2);font-weight:700;margin:0 0 16px;}
+  #dkrg .dkrg-total-break b{color:var(--rain-d);}
+  #dkrg .dkrg-spin-fortune{font-size:16px;font-weight:800;color:var(--clay-d);margin:0 0 12px;letter-spacing:.03em;line-height:1.6;}
   #dkrg .dkrg-gbar{height:7px;background:#ece9e2;border-radius:99px;overflow:hidden;margin-bottom:14px;}
   #dkrg .dkrg-gbar span{display:block;height:100%;width:0;background:var(--rain);border-radius:99px;transition:width .35s ease;}
   #dkrg .dkrg-gtag-2~.dkrg-card-game .dkrg-gbar span,#dkrg #dkrg-g2 .dkrg-gbar span{background:var(--amber);}
@@ -490,13 +519,14 @@
     function g1go(){g1next.hidden=true;g1i++;if(g1i<G1.length){g1render();}else{g1end();}}
     function g1end(){
       $('#dkrg-g1-play').hidden=true;
-      var e=$('#dkrg-g1-end');e.hidden=false;
+      $('#dkrg-g1-end').hidden=false;
       $('#dkrg-g1-final').textContent=g1s;
-      var badge,line;
-      if(g1s>=80){badge="顧鞋顧腳高手";line="你把鞋和腳都照顧得很好，繼續保持。";}
-      else if(g1s>=45){badge="再順手一點就更好";line="有幾個地方踩到雷，補上對的裝備會更舒服。";}
-      else{badge="鞋和腳有點受委屈";line="有幾個小地方可以更好，挑對裝備差很多。";}
-      $('#dkrg-g1-badge').textContent=badge;$('#dkrg-g1-line').textContent=line;
+      var line;
+      if(g1s>=80)line="情境判斷很穩，雨天難不倒你。";
+      else if(g1s>=45)line="有幾步踩到雷，還有進步空間。";
+      else line="這場雨踩了不少雷，別氣餒。";
+      $('#dkrg-g1-line').textContent=line;
+      updateTotal();
     }
     $('#dkrg-g1-again').addEventListener('click',function(){
       g1i=0;g1s=0;$('#dkrg-g1-end').hidden=true;$('#dkrg-g1-play').hidden=false;g1render();
@@ -540,11 +570,14 @@
     function g2go(){g2next.hidden=true;g2i++;if(g2i<G2.length){g2render();}else{g2end();}}
     function g2end(){
       $('#dkrg-g2-play').hidden=true;
-      var e=$('#dkrg-g2-end');e.hidden=false;
+      $('#dkrg-g2-end').hidden=false;
       $('#dkrg-g2-final').textContent=g2s;
-      var badge;
-      if(g2s>=5)badge="雨天小達人";else if(g2s>=3)badge="差一點滿分";else badge="原來都猜錯啦";
-      $('#dkrg-g2-badge').textContent=badge;
+      var line;
+      if(g2s>=5)line="雨天冷知識幾乎都對，內行。";
+      else if(g2s>=3)line="一半以上答對，不錯。";
+      else line="原來不少都猜錯，這下記住了。";
+      $('#dkrg-g2-line').textContent=line;
+      updateTotal();
     }
     g2tf.forEach(function(b){b.addEventListener('click',function(){g2pick(b.dataset.tf==='true');});});
     $('#dkrg-g2-again').addEventListener('click',function(){
@@ -553,16 +586,40 @@
     g2next.addEventListener('click',g2go);
     g2render();
 
+    /* ===== 綜合結算 ===== */
+    function updateTotal(){
+      var g1done=!$('#dkrg-g1-end').hidden, g2done=!$('#dkrg-g2-end').hidden;
+      $('#dkrg-tp1').textContent=g1done?(g1s+' 分'):'未完成';
+      $('#dkrg-tp2').textContent=g2done?('答對 '+g2s+' 題'):'未完成';
+      if(g1done&&g2done){
+        var total=Math.round((g1s + g2s/6*100)/2), badge, line;
+        if(total>=80){badge="雨天絕緣體";line="鞋乾腳爽零踩雷，這場雨對你完全沒轍。";}
+        else if(total>=50){badge="雨天普通人";line="大致 OK，但有幾格還能再補強。";}
+        else{badge="雨天濕腳常客";line="雨天常常中招，補對裝備會差很多。";}
+        $('#dkrg-total-val').textContent=total;
+        $('#dkrg-total-badge').textContent=badge;
+        $('#dkrg-total-line').textContent=line;
+        $('#dkrg-tb1').textContent=g1s; $('#dkrg-tb2').textContent=g2s;
+        $('#dkrg-total-locked').hidden=true; $('#dkrg-total-show').hidden=false;
+      }
+    }
+    $('#dkrg-total-again').addEventListener('click',function(){
+      g1i=0;g1s=0;$('#dkrg-g1-end').hidden=true;$('#dkrg-g1-play').hidden=false;g1render();
+      g2i=0;g2s=0;$('#dkrg-g2-end').hidden=true;$('#dkrg-g2-play').hidden=false;g2render();
+      $('#dkrg-total-show').hidden=true;$('#dkrg-total-locked').hidden=false;
+      $('#dkrg-tp1').textContent='未完成';$('#dkrg-tp2').textContent='未完成';
+    });
+
     /* ===== GAME 3：轉盤抽神器 ===== */
     var G3=[
-      {n:"會呼吸的防水鞋",l:"外面擋雨、裡面透氣，雨天主力",u:"https://www.dk-shoes.com.tw/SalePage/Index/9653989",img:"9653989"},
-      {n:"奈米防水噴霧",l:"出門前一噴，水珠直接滾走",u:"https://www.dk-shoes.com.tw/SalePage/Index/7257466",img:"7257466"},
-      {n:"消臭抑菌噴霧",l:"濕悶腳臭，一噴說掰",u:"https://www.dk-shoes.com.tw/SalePage/Index/7257507",img:"7257507"},
-      {n:"防霉抗菌劑",l:"鞋櫃不再反潮發霉",u:"https://www.dk-shoes.com.tw/SalePage/Index/10776127",img:"10776127"}
+      {n:"會呼吸的防水鞋",f:"天有不測風雲，你有不濕之鞋。",l:"外面擋雨、裡面透氣，雨天主力",u:"https://www.dk-shoes.com.tw/SalePage/Index/9653989",img:"9653989"},
+      {n:"奈米防水噴霧",f:"未雨綢繆，水珠自動繞道走。",l:"出門前一噴，水珠直接滾走",u:"https://www.dk-shoes.com.tw/SalePage/Index/7257466",img:"7257466"},
+      {n:"消臭抑菌噴霧",f:"濕氣難免，異味退散。",l:"濕悶腳臭，一噴說掰",u:"https://www.dk-shoes.com.tw/SalePage/Index/7257507",img:"7257507"},
+      {n:"防霉抗菌劑",f:"鞋櫃乾爽，黴運不沾身。",l:"鞋櫃不再反潮發霉",u:"https://www.dk-shoes.com.tw/SalePage/Index/10776127",img:"10776127"}
     ];
     var spinFace=$('#dkrg-spin-face'),spinGo=$('#dkrg-spin-go'),spinning=false;
     function showGear(g){
-      spinFace.innerHTML='<img class="dkrg-spin-img" alt="'+g.n+'" src="https://www.dk-shoes.com.tw/webapi/imagesV3/Original/SalePage/'+g.img+'/0" onerror="this.style.display=\'none\'">'
+      spinFace.innerHTML='<p class="dkrg-spin-fortune">「'+g.f+'」</p><img class="dkrg-spin-img" alt="'+g.n+'" src="https://www.dk-shoes.com.tw/webapi/imagesV3/Original/SalePage/'+g.img+'/0" onerror="this.style.display=\'none\'">'
         +'<p class="dkrg-spin-name">'+g.n+'</p><p class="dkrg-spin-line">'+g.l+'</p>'
         +'<a class="dkrg-spin-cta" href="'+g.u+'" target="_blank" rel="noopener">看商品 →</a>';
     }
