@@ -362,7 +362,8 @@
   #dkrg .dkrg-total-break b{color:var(--rain-d);}
   #dkrg .dkrg-omikuji{border:1px solid #ddd0c0;background:#fbf7ef;border-radius:10px;padding:18px 16px 16px;margin-bottom:16px;}
   #dkrg .dkrg-omikuji-label{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.25em;color:#fff;background:var(--clay);padding:3px 11px;border-radius:4px;margin-bottom:12px;}
-  #dkrg .dkrg-omikuji-text{font-family:"Noto Serif TC","Songti TC","Source Han Serif TC","PMingLiU","MingLiU",serif;font-size:25px;line-height:1.8;color:#3a2f28;font-weight:700;letter-spacing:.05em;margin:0;}
+  #dkrg .dkrg-omikuji-text{font-family:"Noto Serif TC","Songti TC","Source Han Serif TC","PMingLiU","MingLiU",serif;font-size:25px;line-height:1.85;color:#3a2f28;font-weight:700;letter-spacing:.05em;margin:0;text-align:center;}
+  #dkrg .dkrg-omi-seg{display:inline-block;white-space:nowrap;}
   #dkrg .dkrg-omikuji-roll{opacity:.65;}
   #dkrg .dkrg-draw-rec{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.08em;color:var(--ink2);margin-bottom:10px;}
   #dkrg .dkrg-gbar{height:7px;background:#ece9e2;border-radius:99px;overflow:hidden;margin-bottom:14px;}
@@ -641,8 +642,14 @@
       {n:"多功能防霉抗菌劑",l:"鞋櫃不再反潮發霉",u:"https://www.dk-shoes.com.tw/SalePage/Index/10776127",img:"10776127"}
     ];
     var spinFace=$('#dkrg-spin-face'),spinGo=$('#dkrg-spin-go'),spinning=false;
+    function omiWrap(s){
+      var out='',seg='',punc='，、；。！？';
+      for(var i=0;i<s.length;i++){seg+=s.charAt(i);if(punc.indexOf(s.charAt(i))>=0){out+='<span class="dkrg-omi-seg">'+seg+'</span>';seg='';}}
+      if(seg)out+='<span class="dkrg-omi-seg">'+seg+'</span>';
+      return out;
+    }
     function showDraw(fo,g){
-      spinFace.innerHTML='<div class="dkrg-omikuji"><span class="dkrg-omikuji-label">雨 天 籤</span><p class="dkrg-omikuji-text">'+fo+'</p></div>'
+      spinFace.innerHTML='<div class="dkrg-omikuji"><span class="dkrg-omikuji-label">雨 天 籤</span><p class="dkrg-omikuji-text">'+omiWrap(fo)+'</p></div>'
         +'<div class="dkrg-draw-gear"><span class="dkrg-draw-rec">本籤推薦裝備</span>'
         +'<img class="dkrg-spin-img" alt="'+g.n+'" src="https://www.dk-shoes.com.tw/webapi/imagesV3/Original/SalePage/'+g.img+'/0">'
         +'<p class="dkrg-spin-name">'+g.n+'</p><p class="dkrg-spin-line">'+g.l+'</p>'
@@ -653,7 +660,7 @@
       spinFace.classList.add('is-spinning');
       var ticks=0,total=14+rand(6);
       var iv=setInterval(function(){
-        spinFace.innerHTML='<p class="dkrg-omikuji-text dkrg-omikuji-roll">'+FORTUNES[ticks%FORTUNES.length]+'</p>';
+        spinFace.innerHTML='<p class="dkrg-omikuji-text dkrg-omikuji-roll">'+omiWrap(FORTUNES[ticks%FORTUNES.length])+'</p>';
         ticks++;
         if(ticks>=total){
           clearInterval(iv);
