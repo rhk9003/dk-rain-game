@@ -33,7 +33,7 @@
       <div class="dkrg-steps">
         <span class="dkrg-step-pill">① 情境題</span>
         <span class="dkrg-step-pill">② 對錯題</span>
-        <span class="dkrg-step-pill">③ 抽神器</span>
+        <span class="dkrg-step-pill">③ 求籤</span>
       </div>
       <p class="dkrg-scrollhint">↓ 往下滑開始玩</p>
     </div>
@@ -125,24 +125,24 @@
             <a class="dkrg-btn dkrg-btn-clay" href="https://www.dk-shoes.com.tw/v2/official/SalePageCategory/484785?sortMode=Curator" target="_blank" rel="noopener">逛雨天防水鞋 →</a>
             <button class="dkrg-btn dkrg-btn-ghost" type="button" id="dkrg-total-again">兩關重玩</button>
           </div>
-          <p class="dkrg-end-hint">↓ 往下抽一張今日雨天神器</p>
+          <p class="dkrg-end-hint">↓ 往下求一支今日雨天籤</p>
         </div>
       </div>
     </section>
 
     <!-- ===== 遊戲 3：轉盤抽神器 ===== -->
     <section class="dkrg-game" id="dkrg-spin" aria-labelledby="dkrg-g3-h">
-      <div class="dkrg-gtag dkrg-gtag-3">遊戲 ③ ／ 3 ｜ 抽神器</div>
-      <h2 id="dkrg-g3-h" class="dkrg-gh">今日雨天神器</h2>
-      <p class="dkrg-gsub">點一下，看老天爺今天送你哪一件。</p>
+      <div class="dkrg-gtag dkrg-gtag-3">遊戲 ③ ／ 3 ｜ 求雨天籤</div>
+      <h2 id="dkrg-g3-h" class="dkrg-gh">求一支今日雨天籤</h2>
+      <p class="dkrg-gsub">搖一搖求籤，每支都附一件推薦裝備。</p>
 
       <div class="dkrg-card-game dkrg-spin-wrap">
         <div class="dkrg-spin-stage" id="dkrg-spin-stage">
           <div class="dkrg-spin-face" id="dkrg-spin-face">
-            <span class="dkrg-spin-hint">點下面的按鈕開抽</span>
+            <span class="dkrg-spin-hint">點下方按鈕求籤</span>
           </div>
         </div>
-        <button class="dkrg-btn dkrg-btn-clay dkrg-btn-full" type="button" id="dkrg-spin-go">轉一下</button>
+        <button class="dkrg-btn dkrg-btn-clay dkrg-btn-full" type="button" id="dkrg-spin-go">求一籤</button>
       </div>
     </section>
 
@@ -360,7 +360,11 @@
   #dkrg .dkrg-total-prog b{color:var(--rain-d);}
   #dkrg .dkrg-total-break{text-align:center;font-size:13.5px;color:var(--ink2);font-weight:700;margin:0 0 16px;}
   #dkrg .dkrg-total-break b{color:var(--rain-d);}
-  #dkrg .dkrg-spin-fortune{font-size:16px;font-weight:800;color:var(--clay-d);margin:0 0 12px;letter-spacing:.03em;line-height:1.6;}
+  #dkrg .dkrg-omikuji{border:1px solid #ddd0c0;background:#fbf7ef;border-radius:10px;padding:18px 16px 16px;margin-bottom:16px;}
+  #dkrg .dkrg-omikuji-label{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.25em;color:#fff;background:var(--clay);padding:3px 11px;border-radius:4px;margin-bottom:12px;}
+  #dkrg .dkrg-omikuji-text{font-family:"Noto Serif TC","Songti TC","Source Han Serif TC","PMingLiU","MingLiU",serif;font-size:25px;line-height:1.8;color:#3a2f28;font-weight:700;letter-spacing:.05em;margin:0;}
+  #dkrg .dkrg-omikuji-roll{opacity:.65;}
+  #dkrg .dkrg-draw-rec{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.08em;color:var(--ink2);margin-bottom:10px;}
   #dkrg .dkrg-gbar{height:7px;background:#ece9e2;border-radius:99px;overflow:hidden;margin-bottom:14px;}
   #dkrg .dkrg-gbar span{display:block;height:100%;width:0;background:var(--rain);border-radius:99px;transition:width .35s ease;}
   #dkrg .dkrg-gtag-2~.dkrg-card-game .dkrg-gbar span,#dkrg #dkrg-g2 .dkrg-gbar span{background:var(--amber);}
@@ -611,30 +615,51 @@
     });
 
     /* ===== GAME 3：轉盤抽神器 ===== */
-    var G3=[
-      {n:"會呼吸的防水鞋",f:"天有不測風雲，你有不濕之鞋。",l:"外面擋雨、裡面透氣，雨天主力",u:"https://www.dk-shoes.com.tw/SalePage/Index/9653989",img:"9653989"},
-      {n:"奈米防水噴霧",f:"未雨綢繆，水珠自動繞道走。",l:"出門前一噴，水珠直接滾走",u:"https://www.dk-shoes.com.tw/SalePage/Index/7257466",img:"7257466"},
-      {n:"消臭抑菌噴霧",f:"濕氣難免，異味退散。",l:"濕悶腳臭，一噴說掰",u:"https://www.dk-shoes.com.tw/SalePage/Index/7257507",img:"7257507"},
-      {n:"防霉抗菌劑",f:"鞋櫃乾爽，黴運不沾身。",l:"鞋櫃不再反潮發霉",u:"https://www.dk-shoes.com.tw/SalePage/Index/10776127",img:"10776127"}
+    var FORTUNES=[
+      "天有不測風雲，你有不濕之鞋。",
+      "未雨綢繆者，雨季亦從容。",
+      "水能載舟，亦能濕鞋；備之則安。",
+      "腳下乾爽，運勢自旺。",
+      "濕氣退散，黴運不沾身。",
+      "鞋底站得穩，路就走得穩。",
+      "今日宜換鞋，不宜硬撐。",
+      "雨中慢行，平安到家。",
+      "透氣為上，悶氣為下。",
+      "一雙好鞋，半個晴天。",
+      "腳暖則心安，雨亦無妨。",
+      "晴帶雨傘，雨備乾鞋，雨季不慌。"
+    ];
+    var GEARS=[
+      {n:"DKAIR 素面防潑水空氣鞋",l:"外擋雨、內透氣的雨天主力",u:"https://www.dk-shoes.com.tw/SalePage/Index/9653989",img:"9653989"},
+      {n:"防水簡約真皮休閒鞋",l:"防水真皮，雨天通勤好搭",u:"https://www.dk-shoes.com.tw/SalePage/Index/11273180",img:"11273180"},
+      {n:"戶外疾風防水休閒鞋",l:"防水鞋面＋止滑大底",u:"https://www.dk-shoes.com.tw/SalePage/Index/10295502",img:"10295502"},
+      {n:"AIR 波普防潑水健走鞋",l:"防潑水，健走緩震",u:"https://www.dk-shoes.com.tw/SalePage/Index/10758453",img:"10758453"},
+      {n:"墨白飛織空氣女鞋",l:"人氣百搭，透氣輕量",u:"https://www.dk-shoes.com.tw/SalePage/Index/9021901",img:"9021901"},
+      {n:"經典空氣小白鞋（女）",l:"透氣百搭小白鞋",u:"https://www.dk-shoes.com.tw/SalePage/Index/10755462",img:"10755462"},
+      {n:"奈米透氣防水噴霧",l:"出門前一噴，水珠滾走",u:"https://www.dk-shoes.com.tw/SalePage/Index/7257466",img:"7257466"},
+      {n:"消臭抑菌噴霧",l:"濕悶腳臭，一噴說掰",u:"https://www.dk-shoes.com.tw/SalePage/Index/7257507",img:"7257507"},
+      {n:"多功能防霉抗菌劑",l:"鞋櫃不再反潮發霉",u:"https://www.dk-shoes.com.tw/SalePage/Index/10776127",img:"10776127"}
     ];
     var spinFace=$('#dkrg-spin-face'),spinGo=$('#dkrg-spin-go'),spinning=false;
-    function showGear(g){
-      spinFace.innerHTML='<p class="dkrg-spin-fortune">「'+g.f+'」</p><img class="dkrg-spin-img" alt="'+g.n+'" src="https://www.dk-shoes.com.tw/webapi/imagesV3/Original/SalePage/'+g.img+'/0" onerror="this.style.display=\'none\'">'
+    function showDraw(fo,g){
+      spinFace.innerHTML='<div class="dkrg-omikuji"><span class="dkrg-omikuji-label">雨 天 籤</span><p class="dkrg-omikuji-text">'+fo+'</p></div>'
+        +'<div class="dkrg-draw-gear"><span class="dkrg-draw-rec">本籤推薦裝備</span>'
+        +'<img class="dkrg-spin-img" alt="'+g.n+'" src="https://www.dk-shoes.com.tw/webapi/imagesV3/Original/SalePage/'+g.img+'/0">'
         +'<p class="dkrg-spin-name">'+g.n+'</p><p class="dkrg-spin-line">'+g.l+'</p>'
-        +'<a class="dkrg-spin-cta" href="'+g.u+'" target="_blank" rel="noopener">看商品 →</a>';
+        +'<a class="dkrg-spin-cta" href="'+g.u+'" target="_blank" rel="noopener">看商品 →</a></div>';
     }
     spinGo.addEventListener('click',function(){
       if(spinning)return;spinning=true;
       spinFace.classList.add('is-spinning');
-      var ticks=0,total=12+rand(6);
+      var ticks=0,total=14+rand(6);
       var iv=setInterval(function(){
-        spinFace.innerHTML='<p class="dkrg-spin-name">'+G3[ticks%G3.length].n+'</p>';
+        spinFace.innerHTML='<p class="dkrg-omikuji-text dkrg-omikuji-roll">'+FORTUNES[ticks%FORTUNES.length]+'</p>';
         ticks++;
         if(ticks>=total){
           clearInterval(iv);
           spinFace.classList.remove('is-spinning');
-          showGear(G3[rand(G3.length)]);
-          spinGo.textContent="再轉一次";
+          showDraw(FORTUNES[rand(FORTUNES.length)], GEARS[rand(GEARS.length)]);
+          spinGo.textContent="再求一籤";
           spinning=false;
         }
       },90);
